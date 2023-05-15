@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+    <script>
+        const client = filestack.init('AXWZzDwpORsacSlA2nj3rz');
+        const options = {
+            onFileUploadFinished: (file) => {
+                console.log(file);
+            },
+            fromSources: ['local_file_system', 'url', 'dropbox','googledrive','instagram','facebook','webcam'],
+        };
+
+        client.picker(options).open();
+    </script>
+</body>
+</html>
