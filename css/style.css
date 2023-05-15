@@ -115,67 +115,58 @@ body::-webkit-scrollbar-track {
     to {transform: scale(1)}
   }
 
-/* file uploder */
-#myProgress {
-  width: 100%;
-}
-#uploaded_files {
-  margin-top: 25px;
-  display: flex;
-}
-label {
-  font-weight: bold;
-}
-.file-icon i {
-  font-size: 60px;
-  color: rgb(0, 0, 0);
-}
-.file-details {
-  margin-top: -2px;
-  padding-left: 10px;
-  width: 100%;
-}
-.file-details p {
-  margin-bottom: -7px;
-}
-small {
-  margin-top: 0;
-  color: black;
-}
+  .fsp-picker{
+    background-color: transparent !important;
+    backdrop-filter: blur(4px) !important;
+  }
 
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-file input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  font-size: 100px;
-  text-align: right;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  outline: none;
-  background: white;
-  cursor: inherit;
-  display: block;
-}
-
-.img-zone {
-  background-color: #F2FFF9;
-  border: 5px dashed #4cae4c;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.img-zone h2 {
-  margin-top: 0;
-}
-
-.progress, #img-preview {
-  margin-top: 15px;
-}
+  .uploadbutton {
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 8px;
+    color: #fff;
+    border-radius: 999px;
+  }
+  
+ 
+  .gradient-border {
+    --borderWidth: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  
