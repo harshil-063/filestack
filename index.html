@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+    <button id="uploadBtn">Open File Picker</button>
+    <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
     <script>
         const client = filestack.init('AXWZzDwpORsacSlA2nj3rz');
         const options = {
-            onFileUploadFinished: (file) => {
-                console.log(file);
+            storeTo: {
+                workflows: ["e2b78c91-fdbe-4df8-8c50-da08d1d63097"]
             },
-            fromSources: ['local_file_system', 'url', 'dropbox','googledrive','instagram','facebook','webcam'],
-        };
+            onFileUploadFinished: (res) => {
+                console.log(res.url);
+            },
+            onFileUploadFailed: (res) => {
+                console.log(res);
+            },
+            onFileUploadProgress: (res) => {
+                console.log(res);
+            },
+            onFileSelected: (res) => {
+                console.log(res);
+            },
+            onOpen: (res) => {
+                console.log(res);
+            },
+            onClose: (res) => {
+                console.log(res);
+            },
+            onUploadDone: (res) => {
+                console.log(res);
+            },
+            onUploadStarted: (res) => {
+                console.log(res);
+            },
+            onUploadDone: (res) => {
+                console.log(res);
+            },
+            onUploadStarted: (res) => {
+                console.log(res);
+            },
+            onUploadDone: (res) => {
+                console.log(res);
+            },
+            disableTransformer: true,
+            uploadInBackground: true
 
-        client.picker(options).open();
+        };
+        const uploadBtn = document.getElementById('uploadBtn');
+        uploadBtn.addEventListener('click', () => {
+            picker = client.picker(options);
+            picker.open();
+        });
+
+
     </script>
 </body>
+
 </html>
