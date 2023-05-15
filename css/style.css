@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bodybgcolor: #0D0E20;
+    --primarycolor: #FFFFFF;
+    --sharebg:  rgba(255, 255, 255, 0.1);
+    --modelbg: rgba(0, 0, 0, 0.8);
+    --modelcontent:#fefefe;
+    --gray:#888888;
+    --black:#000000;
+    --wrapperheader:var(--bodybgcolor);
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bodybgcolor);
+}
+
+/* body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+} */
+
+/* header */
+
+.logo h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    margin: 0 !important;
+    color: var(--primarycolor);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.share {
+    cursor: pointer;
+    padding: 14px 32px 14px 24px;
+    gap: 8px;
+    background: var(--sharebg);
+    border-radius: 999px;
+    margin-left: 10px;
+}
+
+.share span {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--primarycolor);
+}
+
+.share img {
+    width: 25px;
+    height: 25px;
+}
+
+/* model  */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modelbg);
+  }
+  
+  .modal-content {
+    background-color: var(--modelcontent);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--gray);
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+  }
+  
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: var(--gray);
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+/* file uploder */
+#myProgress {
+  width: 100%;
+}
+#uploaded_files {
+  margin-top: 25px;
+  display: flex;
+}
+label {
+  font-weight: bold;
+}
+.file-icon i {
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+}
+.file-details {
+  margin-top: -2px;
+  padding-left: 10px;
+  width: 100%;
+}
+.file-details p {
+  margin-bottom: -7px;
+}
+small {
+  margin-top: 0;
+  color: black;
+}
+
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+.img-zone {
+  background-color: #F2FFF9;
+  border: 5px dashed #4cae4c;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.img-zone h2 {
+  margin-top: 0;
+}
+
+.progress, #img-preview {
+  margin-top: 15px;
+}
