@@ -7,38 +7,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="./images/Group.svg">
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./images/Group.svg">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <div class="p-5">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center logo">
-            <img src="./images/Group.svg" alt="" class="me-3 bg-light
+    <!-- <div class="d-flex">
+        <div class="w-20 sidebar">
+            <div class="d-flex align-items-center justify-content-center py-5 logo">
+                <img src="./images/Group.svg" alt="" class="me-3 bg-light
                 rounded-circle" width="50px">
-            <h1 class="">Cliplab</h1>
-          </div>
-          <div class="d-flex d-md-flex d-none">
-            <div class="d-flex">
-              <img src="images/Frame 37.svg" alt="">
-              <img style="margin-left: -12px;" src="images/Frame 38.svg" alt="">
+                <h1 class="">Cliplab</h1>
             </div>
-            <a href="" class="d-flex align-items-center text-decoration-none
-                text-dark share">
-              <img src="images/share 1.svg" alt="">
-              <span class="">Share</span>
-            </a>
-          </div>
+            <button id="uploadBtn" class="uploadbutton gradient-border m-auto"><img src="images/add.svg" alt="">New audio / video</button>
         </div>
-      </div>
+        <div class="w-80">
+            <div class="d-flex d-md-flex d-none">
+                <div class="d-flex">
+                    <img src="images/Frame 37.svg" alt="">
+                    <img style="margin-left: -12px;" src="images/Frame 38.svg" alt="">
+                </div>
+                <a href="" class="d-flex align-items-center text-decoration-none
+                text-dark share">
+                    <img src="images/share 1.svg" alt="">
+                    <span class="">Share</span>
+                </a>
+            </div>
+        </div>
+    </div> -->
 
+    <html lang="en" dir="ltr">
 
-    <button id="uploadBtn" class="uploadbutton gradient-border"><img src="images/add.svg" alt="">New audio / video</button>
+    <head>
+        <meta charset="UTF-8">
+        <title>Side Navigation Bar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <img src="./images/Group.svg" alt="" class="bg-light
+                rounded-circle" width="50px">
+                <span class="logo_name">Cliplab</span>
+            </div>
+            <ul class="nav-links">
+               <li>
+               </li>
+               <li>
+                <div id="uploadBtn" class="icon-link uploadbutton gradient-border m-auto">
+                  <a href="#">
+                    <img src="images/add.svg" alt="">
+                    <span class="link_name">Category</span>
+                  </a>
+                  <!-- <i class='bx bxs-chevron-down arrow'></i> -->
+                </div>
+                <!-- <ul class="sub-menu">
+                  <li><a class="link_name" href="#">Category</a></li>
+                  <li><a href="#">HTML & CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                  <li><a href="#">PHP & MySQL</a></li>
+                </ul> -->
+              </li>
+                <li>
+                    <div class="profile-details">
+                       <ul class="p-0">
+                        <li class="py-2"><img src="images/setting-2 1.svg" alt="Setting" width="30px">Settings</li>
+                        <li class="py-2"><img src="images/message-question 1.svg" alt="Setting" width="30px">Get Help</li>
+                        <li class="py-2"><img src="images/logout.svg" alt="Setting" width="30px">Log out</li>
+                       </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+                <!-- <span class="text">DashBoard Sidebar</span> -->
+            </div>
+        </section>
+    </body>
+
+    </html>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
@@ -47,11 +102,8 @@
     <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
     <script src="./js/index.js"></script>
     <script>
-        const client = filestack.init('AXWZzDwpORsacSlA2nj3rz');
+        const client = filestack.init('Ah6BGoib5TtiyxsLeCtXBz');
         const options = {
-            storeTo: {
-                workflows: ["e2b78c91-fdbe-4df8-8c50-da08d1d63097"]
-            },
             onFileUploadFinished: (res) => {
                 console.log(res.url);
             },
