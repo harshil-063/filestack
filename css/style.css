@@ -25,7 +25,7 @@ padding: 26px 0;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .sidebar .logo-details img {
    margin: 0 15px;
@@ -63,9 +63,9 @@ padding: 26px 0;
   transition: all 0.4s ease;
   text-align: center;
 }
-.sidebar .nav-links li:hover {
+/* .sidebar .nav-links li:hover {
   background: #f3f1f6;
-}
+} */
 .sidebar .sub-menu li:hover {
   background: none;
   color: #77619e;
@@ -76,6 +76,7 @@ padding: 26px 0;
   justify-content: space-between;
 }
 .sidebar.close .nav-links li .icon-link {
+  padding: 0 20px;
   display: block;
 }
 .sidebar .nav-links li i {
@@ -225,6 +226,7 @@ padding: 26px 0;
 padding: 34px 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
@@ -268,7 +270,7 @@ padding: 34px 0;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 14px 20px;
+  padding: 14px 17px;
   gap: 8px;
   color: #fff;
   border-radius: 999px;
@@ -310,3 +312,36 @@ padding: 34px 0;
 
 
   
+.logo h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  margin: 0 !important;
+  color: #FFFFFF;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.share {
+  cursor: pointer;
+  padding: 14px 32px 14px 24px;
+  gap: 8px;
+  background:  rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  margin-left: 10px;
+}
+
+.share span {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  color: #FFFFFF;
+}
+
+.share img {
+  width: 25px;
+  height: 25px;
+}

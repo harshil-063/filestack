@@ -10,8 +10,9 @@
     <link rel="icon" type="image/x-icon" href="./images/Group.svg">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/jquery.table-shrinker.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -41,14 +42,6 @@
         </div>
     </div> -->
 
-    <html lang="en" dir="ltr">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Side Navigation Bar</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-
     <body>
         <div class="sidebar">
             <div class="logo-details">
@@ -57,30 +50,22 @@
                 <span class="logo_name">Cliplab</span>
             </div>
             <ul class="nav-links">
-               <li>
-               </li>
-               <li>
-                <div id="uploadBtn" class="icon-link uploadbutton gradient-border m-auto">
-                  <a href="#">
-                    <img src="images/add.svg" alt="">
-                    <span class="link_name">Category</span>
-                  </a>
-                  <!-- <i class='bx bxs-chevron-down arrow'></i> -->
-                </div>
-                <!-- <ul class="sub-menu">
-                  <li><a class="link_name" href="#">Category</a></li>
-                  <li><a href="#">HTML & CSS</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                  <li><a href="#">PHP & MySQL</a></li>
-                </ul> -->
-              </li>
+                <li style="padding: 0 12px;">
+                    <div id="uploadBtn" class="icon-link uploadbutton gradient-border m-auto">
+                        <a href="#">
+                            <img src="images/add.svg" alt="New video/Audio">
+                            <span class="link_name ps-3">New video/Audio</span>
+                        </a>
+                    </div>
+                </li>
                 <li>
                     <div class="profile-details">
-                       <ul class="p-0">
-                        <li class="py-2"><img src="images/setting-2 1.svg" alt="Setting" width="30px">Settings</li>
-                        <li class="py-2"><img src="images/message-question 1.svg" alt="Setting" width="30px">Get Help</li>
-                        <li class="py-2"><img src="images/logout.svg" alt="Setting" width="30px">Log out</li>
-                       </ul>
+                        <ul class="p-0">
+                            <li class="py-2"><img src="images/setting-2 1.svg" alt="Setting" width="30px">Settings</li>
+                            <li class="py-2"><img src="images/message-question 1.svg" alt="Setting" width="30px">Get
+                                Help</li>
+                            <li class="py-2"><img src="images/logout.svg" alt="Setting" width="30px">Log out</li>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -88,69 +73,141 @@
         <section class="home-section">
             <div class="home-content">
                 <i class='bx bx-menu'></i>
-                <!-- <span class="text">DashBoard Sidebar</span> -->
+                <div class="d-flex d-md-flex d-none">
+                    <div class="d-flex">
+                        <img src="images/Frame 37.svg" alt="">
+                        <img style="margin-left: -12px;" src="images/Frame 38.svg" alt="">
+                    </div>
+                    <a href="" class="d-flex align-items-center text-decoration-none
+                    text-dark share">
+                        <img src="images/share 1.svg" alt="">
+                        <span class="">Share</span>
+                    </a>
+                </div>
             </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table shrink" style="background:#497480; color:white">
+                                <thead>
+                                    <tr>
+                                        <th> User-ID </th> <!-- never shrinks -->
+                                        <th class="shrink-xs"> Age </th>
+                                        <th class="shrink-xxs shrinkable"> Full Name </th>
+                                        <th class="shrink-md"> Company </th>
+                                        <th class=""> Contry </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="shrink-row">
+                                        <td> #0001 </td>
+                                        <td class="shrink-xs"> 27 </td>
+                                        <td class="shrink-xxs shrinkable"> Maria Anders </td>
+                                        <td class="shrink-md"> Alfreds Futterkiste </td>
+                                        <td class=""> Germany </td>
+                                    </tr>
+                                    <tr class="shrink-row">
+                                        <td> #0002 </td>
+                                        <td class="shrink-xs"> 33 </td>
+                                        <td class="shrink-xxs shrinkable"> Francisco Chang </td>
+                                        <td class="shrink-md"> Centro Comercial Moctezuma </td>
+                                        <td class=""> Canada </td>
+                                    </tr>
+                                    <tr>
+                                        <td> #0003 </td>
+                                        <td class="shrink-xs"> 40 </td>
+                                        <td class="shrink-xxxs shrinkable"> Hubert Blaine Wolfe­schlegel­stein­hausen­berger­dorff Sr.
+                                        </td>
+                                        <td class="shrink-md"> Viktor Yegorovich </td>
+                                        <td class=""> Russia </td>
+                                    </tr>
+                                    <tr>
+                                        <td> #0004 </td>
+                                        <td class="shrink-xs"> 24 </td>
+                                        <td class="shrink-xxs shrinkable"> Josef Klimber </td>
+                                        <td class="shrink-md"> Paraguai Muambas </td>
+                                        <td class=""> Brazil </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+        <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <script src="js/jquery.table-shrinker.js"></script>
+        <script src="./js/index.js"></script>
+        <script>
+            const client = filestack.init('Ah6BGoib5TtiyxsLeCtXBz');
+            const options = {
+                fromSources: ['local_file_system', 'url', 'googledrive', 'dropbox', 'onedrive', 'webcam', 'facebook', 'instagram',],
+                onFileUploadFinished: (res) => {
+                    console.log(res.url);
+                },
+                onFileUploadFailed: (res) => {
+                    console.log(res);
+                },
+                onFileUploadProgress: (res) => {
+                    console.log(res);
+                },
+                onFileSelected: (res) => {
+                    console.log(res);
+                },
+                onOpen: (res) => {
+                    console.log(res);
+                },
+                onClose: (res) => {
+                    console.log(res);
+                },
+                onUploadDone: (res) => {
+                    console.log(res);
+                },
+                onUploadStarted: (res) => {
+                    console.log(res);
+                },
+                onUploadDone: (res) => {
+                    console.log(res);
+                },
+                onUploadStarted: (res) => {
+                    console.log(res);
+                },
+                onUploadDone: (res) => {
+                    console.log(res);
+                },
+                disableTransformer: true,
+                uploadInBackground: true,
+                accept: ["video/*"]
+            };
+            const uploadBtn = document.getElementById('uploadBtn');
+            uploadBtn.addEventListener('click', () => {
+                picker = client.picker(options);
+                picker.open();
+            });
+
+        </script>
+        <script>
+            const tableOptions = {
+                useZebra: true,
+                useObserver: true,
+                showToggle: true,
+                showToggleAll: true,
+            };
+            $("table.shrink").tableShrinker(tableOptions);
+
+        </script>
     </body>
-
-    </html>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
-    <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script>
-        const client = filestack.init('Ah6BGoib5TtiyxsLeCtXBz');
-        const options = {
-            onFileUploadFinished: (res) => {
-                console.log(res.url);
-            },
-            onFileUploadFailed: (res) => {
-                console.log(res);
-            },
-            onFileUploadProgress: (res) => {
-                console.log(res);
-            },
-            onFileSelected: (res) => {
-                console.log(res);
-            },
-            onOpen: (res) => {
-                console.log(res);
-            },
-            onClose: (res) => {
-                console.log(res);
-            },
-            onUploadDone: (res) => {
-                console.log(res);
-            },
-            onUploadStarted: (res) => {
-                console.log(res);
-            },
-            onUploadDone: (res) => {
-                console.log(res);
-            },
-            onUploadStarted: (res) => {
-                console.log(res);
-            },
-            onUploadDone: (res) => {
-                console.log(res);
-            },
-            disableTransformer: true,
-            uploadInBackground: true,
-            accept: ["video/*"]
-
-
-        };
-        const uploadBtn = document.getElementById('uploadBtn');
-        uploadBtn.addEventListener('click', () => {
-            picker = client.picker(options);
-            picker.open();
-        });
-
-
-    </script>
-</body>
 
 </html>
